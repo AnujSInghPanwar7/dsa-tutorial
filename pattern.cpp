@@ -103,13 +103,40 @@ int main()
     //     cout<<endl;
     // }
 
-      for (int i = 0; i < n; i++) {
-        char ch = 'A' + i;   // starting character for the row
+    //   for (int i = 0; i < n; i++) {
+    //     char ch = 'A' + i;   // starting character for the row
 
-        for (int j = i + 1; j > 0; j--) {
-            cout << ch;
-            ch--;
+    //     for (int j = i + 1; j > 0; j--) {
+    //         cout << ch;
+    //         ch--;
+    //     }
+    //     cout << endl;
+    // }
+
+    // for (int i = 0; i < n; i++)
+    // {
+    //     for (int k = 0; k < 2*i; k++){
+    //     cout<<" ";
+    // }
+    //     for (int j = 0; j < n - i; j++)
+    //     {
+    //        cout << i + 1 << " ";
+    //     }
+    //     cout << endl;
+    // }
+
+    char ch = 'A';
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < 2 * i; j++)
+        {
+            cout << " ";
         }
+        for (int k = 0; k < n - i; k++)
+        {
+            cout << ch<<" ";
+        }
+        ch++;
         cout << endl;
     }
 }
