@@ -125,18 +125,36 @@ int main()
     //     cout << endl;
     // }
 
-    char ch = 'A';
+    // char ch = 'A';
+    // for (int i = 0; i < n; i++)
+    // {
+    //     for (int j = 0; j < 2 * i; j++)
+    //     {
+    //         cout << " ";
+    //     }
+    //     for (int k = 0; k < n - i; k++)
+    //     {
+    //         cout << ch<<" ";
+    //     }
+    //     ch++;
+    //     cout << endl;
+    // }
+
     for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < 2 * i; j++)
+        for (int j = n - i - 1; j > 0; j--)
         {
             cout << " ";
         }
-        for (int k = 0; k < n - i; k++)
+        for (int k = 0; k <= i; k++)
         {
-            cout << ch<<" ";
+            cout << k + 1;
         }
-        ch++;
+        for (int l = i; l > 0; l--)
+        {
+            cout << l;
+        }
+
         cout << endl;
     }
 }
