@@ -3,238 +3,138 @@ using namespace std;
 int main()
 {
     int n = 4;
-    // for(int i = 1 ; i <=n; i++){//outer loop
-    //     for(int j = 1 ; j <= n ; j++){//inner loop
-    //         cout<<j <<" ";
-    //     }
-    //     cout<<endl;
-    // }
+    int num = 0;
+char ch = 'A';
+    // Q) square patterns
+    // number
 
-    // for (int i = 0; i < n; i++)//outer loop
-    // {
-    //     char ch = 'A';
-    //     for (int j = 0; j < n; j++)//inner loop
-    //     {
-    //         cout << ch<<" ";
-    //         ch = ch + 1;
-    //     }
-    //     cout << endl;
-    // }
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n; j++)
+        {
+            cout<<j<<" ";
+        }
 
-    // int a = 1;
-    //  for(int i = 1 ; i <=n; i++){//outer loop
-    //     for(int j = 1 ; j <= n ; j++){//inner loop
-    //         cout<<a <<" ";
-    //         a = a+1;
-    //     }
-    //     cout<<endl;
-    // }
+        cout<<endl;
+    }
 
-    // int a = 0; // my code different from lecture
-    // for (int i = 0; i < n; i++)
-    // {
-    //     for (int j = 0; j <= a; j++) // for(int j = 0; j < i+1 ; j++)
-    //     {
-    //         cout << "*";
-    //     }
-    //     a = a + 1; // then there is no need for this
-    //     cout << endl;
-    // }
+    // Q) square patterns
+    // star
 
-    // int a=1;
-    // for (int i = 0; i < n; i++)
-    // {
-    //     for (int j = 0; j <i+1 ; j++)
-    //     {
-    //         cout<<a<<" ";//instead of a we can use i+1
-    //     }
-    //     a=a+1;
-    //     cout<<endl;
-    // }
+    // int n=4;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            cout<<"* ";
+        }
+        cout<<endl;
+    }
+
+    // Q) square patterns
+    // Char
+
+    for (int i = 0; i < n; i++)
+    {
+        char ch='A';
+        for (int j = 0; j < n; j++)
+        {
+
+            cout<<ch<<" ";
+            ch=ch+1;
+        }
+        cout<<endl;
+    }
+
+    // Q) square pattern
+    // continuous number
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            num++;
+            cout<<num<<" ";
+        }
+        cout<<endl;
+    }
+
+    // Q) square pattern
+    // continuous character
 
     // char ch='A';
-    //     for (int i = 0; i < n; i++)
-    //     {
-    //         for (int j = 0; j < i+1; j++)
-    //         {
-    //             cout<<ch;
-    //         }
-    //         ch=ch+1;
-    //         cout<<endl;
-    //     }
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            cout<<ch<<" ";
+            ch++;
+        }
+        cout<<endl;
+    }
 
-    // for (int i = 0; i < n; i++)
-    // {
-    //     for (int j = 0; j < i+1; j++)
-    //     {
-    //         cout<<j+1;
-    //     }
-    //     cout<<endl;
-    // }
-
-    // for (int i = 0; i < n; i++)
-    // {
-    //     for (int j = i+1; j > 0; j--)
-    //     {
-    //         cout<<j<<" ";
-    //     }
-    //     cout<<endl;
-    // }
-
-    // int a=1;
-    // for (int i = 0; i < n; i++)
-    // {
-    //     for (int j = 0; j < i+1; j++)
-    //     {
-    //         cout<<a<<" ";
-    //         a++;
-    //     }
-    //     cout<<endl;
-    // }
-
-    // char ch ='A';
-    // for (int i = 0; i < n; i++)
-    // {
-    //     for (int j = 0; j < i+1; j++)
-    //     {
-    //         cout<<ch<<" ";
-    //     }
-    //     ch++;
-    //     cout<<endl;
-    // }
-
-    //   for (int i = 0; i < n; i++) {
-    //     char ch = 'A' + i;   // starting character for the row
-
-    //     for (int j = i + 1; j > 0; j--) {
-    //         cout << ch;
-    //         ch--;
-    //     }
-    //     cout << endl;
-    // }
-
-    // for (int i = 0; i < n; i++)
-    // {
-    //     for (int k = 0; k < 2*i; k++){
-    //     cout<<" ";
-    // }
-    //     for (int j = 0; j < n - i; j++)
-    //     {
-    //        cout << i + 1 << " ";
-    //     }
-    //     cout << endl;
-    // }
-
-    // char ch = 'A';
-    // for (int i = 0; i < n; i++)
-    // {
-    //     for (int j = 0; j < 2 * i; j++)
-    //     {
-    //         cout << " ";
-    //     }
-    //     for (int k = 0; k < n - i; k++)
-    //     {
-    //         cout << ch<<" ";
-    //     }
-    //     ch++;
-    //     cout << endl;
-    // }
-
-    // for (int i = 0; i < n; i++)
-    // {
-    //     for (int j = n - i - 1; j > 0; j--)
-    //     {
-    //         cout << " ";
-    //     }
-    //     for (int k = 0; k <= i; k++)
-    //     {
-    //         cout << k + 1;
-    //     }
-    //     for (int l = i; l > 0; l--)
-    //     {
-    //         cout << l;
-    //     }
-
-    //     cout << endl;
-    // }
-
-    // for (int i = 0; i < n; i++)
-    // {
-    //     for (int j = n - i - 1; j > 0; j--)
-    //     {
-    //         cout << " ";
-    //     }
-    //     cout << "*";
-    //     for (int k = i; k > 0; k--)
-    //     {
-    //         cout << " ";
-    //     }
-    //     for (int k = i; k > 0; k--)
-    //     {
-    //         if (k != 1)
-    //         {
-    //             cout << " ";
-    //         }
-    //     }
-    //     if (i != 0)
-    //     {
-    //         cout << "*";
-    //     }
-    //     cout << endl;
-    // }
-    // for (int i = 1; i < n; i++)
-    // {
-    //     for (int j = i; j > 0; j--)
-    //     {
-    //         cout << " ";
-    //     }
-    //     cout << "*";
-    //     for (int k = n - i - 1; k > 0; k--)
-    //     {
-    //         cout << " ";
-    //     }
-    //     for (int l = n - i - 2; l > 0; l--)
-    //     {
-    //         cout << " ";
-    //     }
-    //     if (i != n - 1)
-    //     {
-    //         cout << "*";
-    //     }
-    //     cout << endl;
-    // }
+    // Q) triangle pattern
+    //  * 📐
 
     for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < i + 1; j++)
+        for (int j = 0; j <= i; j++)
         {
-            cout << "*";
-        }
-        for (int k = 2 * (n - 1 - i); k > 0; k--)
-        {
-            cout << " ";
-        }
-        for (int j = 0; j < i + 1; j++)
-        {
-            cout << "*";
+            cout << "* ";
         }
         cout << endl;
     }
+
+    // Q)triangle pattern
+    // same no hoga ek line mai but har line ke saath no increase hoga 📐
+
     for (int i = 0; i < n; i++)
     {
-        for (int j = n; j > i; j--)
+        for (int j = 0; j <= i; j++)
         {
-            cout << "*";
+            cout << num + 1 << " ";//optimise krenge to num+1 ki jagah hum direct i+1 hi print kr sakte jise hume num ko fir baar baar ++ krne ki jarurat nahi hai
         }
-        for (int k = 0; k < 2 * i; k++)
-        {
-            cout << " ";
-        }
-        for (int j = n; j > i; j--)
-        {
-            cout << "*";
-        }
-
+        num++;
         cout << endl;
     }
+
+    // Q)triangle pattern
+    // same char hoga ek line mai but har line ke saath char increase hoga 📐
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < i+1; j++)
+        {
+            cout<<ch<<" ";
+        }
+        ch++;
+        cout<<endl;
+    }
+    
+    // Q)triangle pattern
+    // same no se start hoga ek line mai but har line mai no increase hoga 📐
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < i+1; j++)
+        {
+            cout<<j+1<<" ";
+        }
+        cout<<endl;
+    }
+
+    //Q) reverse triangle pattern
+    //same no se end hoga jo ki decrease hoga start se ek line mai but har line mai no increase hoga 📐
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = i+1; j > 0; j--)
+        {
+            cout<<j<<" ";
+        }
+        cout<<endl;
+    }
+    
+    
+    return 0;
 }
