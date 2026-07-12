@@ -83,6 +83,63 @@ int Binomial(int n, int r)
 {
     return factorial(n) / (factorial(r) * factorial(n - r));
 }
+
+// Write a function to check if a number is prime or not
+int PrimeOrNot(int n)
+{
+    bool isPrime = true;
+    for (int i = 2; i < n; i++)
+    {
+        if (n % i == 0)
+        {
+            isPrime = false;
+        }
+    }
+    return isPrime;
+}
+
+// Write a function to print all prime number from 2 to n
+void AllPrime(int n)
+{
+    for (int i = 2; i < n; i++)
+    {
+        bool isPrime = true;
+        for (int j = 2; j < i; j++)
+        {
+            if (i % j == 0)
+            {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime == true)
+        {
+            cout << i << " , ";
+        }
+    }
+}
+
+// Write a function to print nth fibonacci
+int fibonacci(int n)
+{
+    if (n == 0)
+    {
+        return 0;
+    }
+    if (n == 1)
+    {
+        return 1;
+    }
+    int a = 0, b = 1, c;
+    for (int i = 2; i <= n; i++)
+    {
+        c = a + b;
+        a = b;
+        b = c;
+    }
+
+    return c;
+}
 int main()
 {
 
@@ -122,5 +179,16 @@ int main()
 
     // Calculate ncr binomial coffiecient for n and r
     cout << Binomial(6, 3) << endl;
+
+    // Write a function to check if a number is prime or not
+    cout << PrimeOrNot(11) << endl;
+
+    // Write a function to print all prime number from 2 to n
+    AllPrime(55);
+    cout << endl
+         << endl;
+
+    // Write a function to print nth fibonacci
+    cout << fibonacci(9);
     return 0;
 }
