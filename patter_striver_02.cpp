@@ -115,7 +115,7 @@ void pattern6(int n)
     for (int i = 0; i < n; i++)
     {
         int num = 1;
-        for (int j = n-i; j >= 1 ; j--)
+        for (int j = n - i; j >= 1; j--)
         {
             cout << num;
             num++;
@@ -132,18 +132,116 @@ void pattern6(int n)
 //  *******
 // *********
 // Print the pattern in the function given to you.
-void pattern7(int n){
-    for (int i = 1; i < n+1; i++)
+void pattern7(int n)
+{
+    for (int i = 1; i < n + 1; i++)
     {
         for (int j = n; j > i; j--)
         {
-            cout<<" ";
+            cout << " ";
         }
         for (int k = 0; k < i; k++)
         {
+            cout << "*";
+        }
+        for (int k = i - 1; k > 0; k--)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
+
+// Given an integer n. You need to recreate the pattern given below for any value of N. Let's say for N = 5, the pattern should look like as below:
+// *********
+//  *******
+//   *****
+//    ***
+//     *
+// Print the pattern in the function given to you.
+void pattern8(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            cout << " ";
+        }
+        for (int k = 2 * n - 1; k > 2 * i; k--)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
+
+// Given an integer n. You need to recreate the pattern given below for any value of N. Let's say for N = 5, the pattern should look like as below:
+//     *
+//    ***
+//   *****
+//  *******
+// *********
+// *********
+//  *******
+//   *****
+//    ***
+//     *
+// Print the pattern in the function given to you.
+
+void pattern9(int n)
+{
+    //upper half
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = n - i - 1; j > 0; j--)
+        {
+            cout << " ";
+        }
+        for (int k = 0; k < 2 * i + 1; k++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+    //lower half
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            cout << " ";
+        }
+        for (int k = 2 * n - 1; k > 2 * i; k--)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
+
+// Given an integer n. You need to recreate the pattern given below for any value of N. Let's say for N = 5, the pattern should look like as below:
+// *
+// **
+// ***
+// ****
+// *****
+// ****
+// ***
+// **
+// *
+// Print the pattern in the function given to you.
+
+void pattern10(int n){
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < i+1; j++)
+        {
             cout<<"*";
         }
-        for (int k = i-1; k > 0; k--)
+        cout<<endl;
+    }
+    for (int i = 1; i < n; i++)
+    {
+        for (int j = n-i; j > 0; j--)
         {
             cout<<"*";
         }
@@ -153,27 +251,20 @@ void pattern7(int n){
 }
 
 // Given an integer n. You need to recreate the pattern given below for any value of N. Let's say for N = 5, the pattern should look like as below:
-// *********
-//  *******
-//   *****
-//    ***
-    // *
+// 1 
+// 0 1 
+// 1 0 1 
+// 0 1 0 1 
+// 1 0 1 0 1
 // Print the pattern in the function given to you.
-void pattern8(int n) {
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < i; j++)
-        {
-            cout<<" ";
-        }
-        for (int k = 2*n-1; k > 2*i; k--)
-        {
-            cout<<"*";
-        }
-        cout<<endl;
-    }
+
+// void pattern11(int n){
+//     for (int i = 0; i < n; i++)
+//     {
+//         /* code */
+//     }
     
-    }
+// }
 
 int main()
 {
@@ -191,6 +282,10 @@ int main()
     pattern7(5);
     cout << endl;
     pattern8(5);
+    cout << endl;
+    pattern9(5);
+    cout << endl;
+    pattern10(5);
     cout << endl;
     return 0;
 }
